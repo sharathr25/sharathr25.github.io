@@ -60,7 +60,8 @@
         graphData={prunedTree}
         nodeColor={node => !node.childLinks.length ? 'green' : node.collapsed ? 'red' : 'yellow'}
         onNodeClick={handleNodeClick}
-        nodeLabel="id"
+        nodeLabel={({id, weight}) => `id:${id}   weight:${weight}`}
+        warmupTicks={240}
       />;
     };
 
